@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "wrapper for npm that provides a _auth configuration from keychain",
   "main": "index.js",
+  "bin": {
+    "npmka": "cli.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -31,5 +34,12 @@
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-prettier": "3.0.0",
     "prettier": "1.14.3"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "inquirer": "^6.2.0",
+    "keytar": "^4.3.0",
+    "minimist": "^1.2.0",
+    "update-notifier": "^2.5.0"
   }
 }
