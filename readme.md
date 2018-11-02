@@ -11,6 +11,13 @@ your global env or `.npmrc` files
 
 `npmka [options] [classic npm commands]`
 
+for example
+
+```
+npmka install
+npmka --user=xiphe publish
+```
+
 ## options
 
 - `--re-auth` enforces the auth dialog
