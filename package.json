@@ -1,6 +1,6 @@
 {
   "name": "npm_keychain_auth",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "npm wrapper for using _auth config without exposing your credentials in your global env or .npmrc files",
   "main": "index.js",
   "bin": {
