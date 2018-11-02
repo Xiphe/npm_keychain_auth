@@ -77,7 +77,11 @@ async function getPassword(user, force) {
 
 function printHelp() {
   console.log(`${chalk.blue(`npmka@${pkg.version}`)}
-npm wrapper for using _auth npm without exposing your password
+npm wrapper for using ${chalk.bold(
+    '_auth',
+  )} config without exposing your credentials in your global env or ${chalk.bold(
+    '.npmrc',
+  )} files
 
 ${chalk.dim('Usage:')}
   ${chalk.yellow('npmka')} [options] [classic npm commands]
