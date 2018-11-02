@@ -18,6 +18,9 @@ npmka install
 npmka --user=xiphe publish
 ```
 
+you will get a prompt for your credentials and afterwards
+the npm command will run with your `_auth`.
+
 ## options
 
 - `--re-auth` enforces the auth dialog
