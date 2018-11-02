@@ -65,7 +65,8 @@ async function getPassword(user, force) {
         );
         break;
       default:
-        throw new Error('This should have never happened!');
+        /* noop */
+        break;
     }
 
     return encodedPassword;
@@ -106,11 +107,16 @@ async function runner() {
 
   const password = await getPassword(argv.user, argv['re-auth']);
 
+  const email = execSync('npm config get email')
+    .toString()
+    .trim();
+
   const s = spawn('npm', process.argv.slice(2), {
     stdio: 'inherit',
     env: {
       ...process.env,
       npm_config__auth: password,
+      npm_config_email: email === 'undefined' ? 'undefined@example.org' : email,
     },
   });
 
